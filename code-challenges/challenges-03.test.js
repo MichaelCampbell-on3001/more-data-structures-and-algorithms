@@ -16,7 +16,11 @@ let $ = createSnippetWithJQuery(`
 `);
 
 const changeAllClassNames = () => {
-  // Solution code here...
+  $('li,apple').removeAttr('apple');
+  $('li,orange').removeAttr('orange');
+  $('li') .addClass('fruit');
+
+
 };
 
 /* ------------------------------------------------------------------------------------------------
