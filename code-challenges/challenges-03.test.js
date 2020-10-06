@@ -122,7 +122,7 @@ If two people share the same last name, alphabetize on their first name.
 If two people have the same full name, the younger one should come first. Do not worry about capitalization.
 ------------------------------------------------------------------------------------------------ */
 
-const sortPeopleBetter = (arr) => {
+xconst sortPeopleBetter = (arr) => {
   // Solution code here...
 };
 
@@ -132,7 +132,7 @@ Write a function named sortMeetingsByDay that takes in an array of objects, each
 Sort the meetings by the day on which they happen, Monday-Friday. It does not matter which order meetings come in on a particular day. For example, if there are two meetings on Monday, it does not matter which comes first.
 ------------------------------------------------------------------------------------------------ */
 
-function Meeting(dayOfWeek, start, end) {
+xfunction Meeting(dayOfWeek, start, end) {
   this.dayOfWeek = dayOfWeek;
   this.start = start;
   this.end = end;
