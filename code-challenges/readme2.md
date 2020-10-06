@@ -40,3 +40,5 @@ The speed and technique of the sort functionality internally is determined by Ja
 compareFunction(a, b) must always return the same value when given a specific pair of elements a and b as its two arguments. If inconsistent results are returned then the sort order is undefined.
 Reference
 MDN
+
+code challenge 03 complete
