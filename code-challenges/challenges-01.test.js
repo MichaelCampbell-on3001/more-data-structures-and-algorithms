@@ -42,9 +42,11 @@ const addValues = (arr, value) => {
 
 const addNumbers = (num, arr, times, callback) => {
   // Solution code here...
-  for(let i = 0; i < times; i++){
+  for (let i = 0; i < times; i++) {
     callback(arr, num);
   }
+  console.log(arr);
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
