@@ -10,6 +10,12 @@ Write a function named raisedToTheThird that takes in an array of numbers and re
 
 const raisedToTheThird = (arr) => {
   // Solution code here...
+  let output = [];
+
+  arr.forEach(value => {
+    output.push(Math.pow(value, 3));
+  });
+  return output;
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -21,7 +27,10 @@ Write a function that appends ' The end.' to a string, and returns the modified 
 
 const appendTheEnd = (str) => {
   // Solution code here...
+  let output = str;
+  return `${str} The end.`;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -38,6 +47,7 @@ console.log(a) prints [1, 2, 3, 1]
 
 const appendFirstToLast = (arr) => {
   // Solution code here...
+  arr.push(arr[0]);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -57,6 +67,8 @@ console.log(a) prints { fullName: 'Octavia Estelle Butler', yearBorn: 1947 }
 
 const addBirthYearProperty = (obj, year) => {
   // Solution code here...
+  addBirthYearProperty = (obj,year);
+  console.log(a);
 };
 
 /* ------------------------------------------------------------------------------------------------
