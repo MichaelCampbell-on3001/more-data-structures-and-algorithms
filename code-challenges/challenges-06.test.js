@@ -71,6 +71,8 @@ let $ = createSnippetWithJQuery(`
 
 const templatingWithMustache = () => {
   // Solution code here...
+  let array = [];
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
