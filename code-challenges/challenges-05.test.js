@@ -64,10 +64,10 @@ For example, if the input is 'Welcome', the output will be:
 const howMuchPencil = (str) => {
   let result = [];
   // Solution code here...
-  for (let i = 0; i <= str.length; i==) {
-    let sliceWorld
+  for (let i = 0; i <= str.length; i ++) {
+    let sliceWorld = str.slice(i);
+    result.push(sliceWorld);
   }
-}
   return result;
 };
 
