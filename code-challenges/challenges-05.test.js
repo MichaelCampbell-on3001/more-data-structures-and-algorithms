@@ -38,6 +38,8 @@ let $ = createSnippetWithJQuery(`
 
 const templateWithJQuery = () => {
   // Solution code here...
+  let starwarsTemplate = $('#templte').html();
+  
 }
 
 /* ------------------------------------------------------------------------------------------------
