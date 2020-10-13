@@ -132,6 +132,21 @@ const getCourseKeys = (obj) => {
 
   const hasChildrenValues = (arr, character) => {
     // Solution code here...
+    let charNumber;
+    arr.forEach((char, index) => {
+      if (char.name === character) {
+        charNumber = index;
+      }
+    });
+    if (charNumber === undefined) {
+      return false;
+    }
+    if (arr[charNumber].children.length > 1) {
+      return true;
+    } else {
+      return false;
+    }
+
 
   };
 
