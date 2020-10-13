@@ -38,9 +38,15 @@ let $ = createSnippetWithJQuery(`
 
 const templateWithJQuery = () => {
   // Solution code here...
-  let starwarsTemplate = $('#templte').html();
-  
-}
+  let starWarsTemplate = $('#templte').html();
+  starWarsPeople.forEach(value => {
+    const $newSection = $(`<section>${starWarsTemplate')</section>`};
+    $newSection.find('h2').tet(value.name);
+    $newSection.find('h3').text(value.height);
+    $newSection.find('p').text(value.eye_color);
+    $('main').append($newSection);
+  });
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -340,6 +346,6 @@ xdescribe('Testing challenge 11', () => {
 });
 
 
-function createSnippetWithJQuery(html){
+function createSnippetWithJQuery(html) {
   return cheerio.load(html);
 };
