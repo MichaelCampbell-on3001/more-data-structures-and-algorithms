@@ -28,7 +28,7 @@ function sayHello(request, response) {
   }
   catch (error) {
     console.log('ERROR', error);
-    response.status(404).send('Oops, somthing messed.');
+    response.status(404).send('Oops, something messed up.');
   }
 }
 
@@ -58,6 +58,8 @@ For example, filterStringsWithVowels('gregor','hound','xyz') returns ['gregor', 
 
 const filterStringsWithVowels = (arr) => {
   // Solution code here...
+  let regex =/[aeiou]/gi;
+  return arr.filter(word => word.match(regex));
 };
 
 
