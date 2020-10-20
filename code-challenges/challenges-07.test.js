@@ -21,7 +21,9 @@ let $ = createSnippetWithJQuery(`
 
 const addTea = () => {
   // Solution code here...
-}
+  $('ul').append('<li>tea</li>');
+
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
