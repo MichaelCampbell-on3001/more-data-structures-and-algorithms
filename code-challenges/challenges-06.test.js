@@ -97,7 +97,7 @@ const courseInfo = {
 
 const getCourseKeys = (obj) => {
   // Solution code here...
-  const getCourseKeys = (obj) => {
+  
     return Object.keys(obj);
 
   };
