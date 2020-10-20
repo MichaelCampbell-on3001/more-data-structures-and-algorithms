@@ -24,14 +24,12 @@ const createServer = () => {
 function sayHello(request, response) {
   // Solution code here...
   try {
-    response.send('Hello from the back-end');
-  }
+    response.send('Hello from the back-end');}
   catch (error) {
     console.log('ERROR', error);
-    response.status(404).send('Oops, something messed up.');
+    response.status(404).send('oops, something went wrong.');
   }
 }
-
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -58,7 +56,7 @@ For example, filterStringsWithVowels('gregor','hound','xyz') returns ['gregor', 
 
 const filterStringsWithVowels = (arr) => {
   // Solution code here...
-  let regex =/[aeiou]/gi;
+  let regex = /[aeiou]/gi;
   return arr.filter(word => word.match(regex));
 };
 
@@ -73,6 +71,8 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 
 const notInFirstArray = (forbiddenValues, arr) => {
   // Solution code here...
+  return arr.filter(word => !forbiddenValues.includes(word));
+
 };
 
 /* ------------------------------------------------------------------------------------------------
