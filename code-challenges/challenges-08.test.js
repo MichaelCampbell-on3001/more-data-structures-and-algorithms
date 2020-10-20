@@ -24,12 +24,14 @@ const createServer = () => {
 function sayHello(request, response) {
   // Solution code here...
   try {
-    response.send('Hello from the back-end');}
+    response.send('Hello from the back-end');
+  }
   catch (error) {
     console.log('ERROR', error);
-    response.status(404).send('oops, something went wrong.');
+    response.status(404).send('Oops, something messed up.');
   }
 }
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -206,7 +208,7 @@ Run your tests from the console: jest challenges-08.test.js
 
 ------------------------------------------------------------------------------------------------ */
 
-describe('Testing challenge 1', () => {
+xdescribe('Testing challenge 1', () => {
 
   const request = require('supertest');
 
