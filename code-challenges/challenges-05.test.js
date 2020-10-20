@@ -40,8 +40,8 @@ const templateWithJQuery = () => {
   // Solution code here...
   let starWarsTemplate = $('#templte').html();
   starWarsPeople.forEach(value => {
-    const $newSection = $(`<section>${starWarsTemplate')</section>`};
-    $newSection.find('h2').tet(value.name);
+    const $newSection = $('<section>${starWarsTemplate}</section>');
+    $newSection.find('h2').text(value.name);
     $newSection.find('h3').text(value.height);
     $newSection.find('p').text(value.eye_color);
     $('main').append($newSection);
@@ -131,8 +131,8 @@ const listFoods = (recipe) => {
   let result = [];
   // Solution code here...
   recipe.ingredients.forEach(ingredient => {
-    let firstSpace = ingredient.indexOf('');
-    let secondSpace = ingredient.indexOf('', (firstSpace = 1));
+    let firstSpace = ingredient.indexOf(' ');
+    let secondSpace = ingredient.indexOf(' ', (firstSpace + 1));
     result.push(ingredient.slice(secondSpace + 1));
 
   });
