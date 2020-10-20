@@ -57,14 +57,10 @@ Return an array containing all the matches.
 
 const isCapitalized = (str) => {
   // Solution code here...
-<<<<<<< HEAD
+  
   let regex = /[A-Z]\w*/g;
   let results = str.match(regex);
   return results ? results : [];
-=======
-  return str.match(/[A-Z]\w{1,}/g) ||
-  
->>>>>>> 41b86cb0a7b2944b895c864f368495f08481d156
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -75,29 +71,15 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 
 const citiesAtoJ = (arr) => {
   // Solution code here...
-<<<<<<< HEAD
   let cities = [];
   let regex = /^[A-Ja-j]\w+\b/;
   arr.forEach(city => {
-    if (regex.test(city) === true){
+    if (regex.test(city) === true) {
       cities.push(city);
     }
   });
   return cities;
 };
-=======
-  let CityName = [];
-
-  arr.forEach(element => {
-
-    if ((/^[A-J]/g).test(element)) {
-      cityNames.push(element);
-    }
-  });
-  return cityNames;
-};
-
->>>>>>> 41b86cb0a7b2944b895c864f368495f08481d156
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5 - Stretch Goal
 
