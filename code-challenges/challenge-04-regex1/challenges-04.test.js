@@ -70,17 +70,15 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 
 const citiesAtoJ = (arr) => {
   // Solution code here...
-  let CityName = [];
-
-  arr.forEach(element => {
-
-    if((/^[A-J]/g).test(element)){
-      cityNames.push(element);
+  let cities = [];
+  let regex = /^[A-Ja-j]\w+\b/;
+  arr.forEach(city => {
+    if (regex.test(city) === true){
+      cities.push(city);
     }
   });
-  return cityNames;
+  return cities;
 };
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5 - Stretch Goal
 
