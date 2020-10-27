@@ -38,7 +38,7 @@ let $ = createSnippetWithJQuery(`
 
 const templateWithJQuery = () => {
   // Solution code here...
-  let starWarsTemplate = $('#templte').html();
+  let starWarsTemplate = $('#template').html();
   starWarsPeople.forEach(value => {
     const $newSection = $(`<section>${starWarsTemplate}</section>`);
     $newSection.find('h2').text(value.name);
