@@ -17,7 +17,7 @@ const createServer = () => {
     res.send('I am a U.S. Navy Vet and a software developer.');
   });
   app.get('/favoritefoods', function (req, res) {
-    res.send(['street tacos', 'pizza', 'chicken', 'mashed potatoes']);
+    res.send(['street tacos', 'pizza', 'fried chicken', 'mashed potatoes']);
   });
   app.get('*', function (req, res) {
     res.status(404).send('Uh-Oh, Not Sure What Happened There');
@@ -64,6 +64,12 @@ For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 
 const totalSum = (input) => {
   // Solution code here...
+  return input.reduce((challengeThree, sumOne) => {
+    let count = sumOne.reduce((accumulator, sumTwo) => {
+      return accumulator + sumTwo;
+    }, 0);
+    return challengeThree + count;
+  }, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -80,6 +86,9 @@ For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 
 const divisibleByFiveTwoToThePower = (input) => {
   // Solution code here...
+  return input.map((Array) => {
+    return Array.filter(element =>element % 5 === 0 && typeof element === 'number').map(result =>Math.pow(2, result));
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
