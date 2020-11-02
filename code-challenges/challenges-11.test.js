@@ -13,9 +13,12 @@ You can assume that neither firstName nor lastName will be blank
 ------------------------------------------------------------------------------------------------ */
 const toLastNames = people => {
   // Solution code here...
-  return people.map((person) => {
-    return '${person.firstName} ${person.lastName}';
+  let combineNames = people.map( (currVal) => {
+    let person = currVal.firstName + ' ' + currVal.lastName;
+    return person;
   });
+
+  return combineNames;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -50,7 +53,7 @@ Note: if you ever need to validate an email using a regex in practice, the Inter
 
 const validateEmail = (email) => {
   // Solution code here...
-  let regex = /^([a-z0-9]+|[a-z0-9]+\.[a-z0-9]+ )@[a-z0-9]+\.(net|com|org)+$/g;
+  let regex = /^([a-z0-9]+|[a-z0-9]+\.[a-z0-9]+)@[a-z0-9]+\.(net|com|org)+$/g;
   return regex.test(email);
 };
 
