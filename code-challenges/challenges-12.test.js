@@ -69,9 +69,9 @@ const salesData = (hours, data) => {
   // Solution code here...
   let arrObj = [];
   for (let i = 0; i < data.length; i++) {
-    arrObj.push({ sales; `${data[i]} cookies`, time: `${hours[i]}`});
-}
-return arrObj;
+    arrObj.push({ sales: `${data[i]} cookies`, time: `${hours[i]}` });
+  }
+  return arrObj;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -97,6 +97,13 @@ const errands = [
 
 const howManyTreats = (arr) => {
   // Solution code here...
+  let arrTestFour = arr.map(element => {
+    if element.store === 'Pet store'){
+      answer = element.itmes[1].quantity;
+    }
+  });
+  console.log(arrTestFour);
+  return answer;
 };
 
 /* ------------------------------------------------------------------------------------------------
