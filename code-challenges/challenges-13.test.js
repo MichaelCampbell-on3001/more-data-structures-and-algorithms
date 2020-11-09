@@ -20,7 +20,8 @@ const $ = createSnippetWithJQuery(`
 `);
 
 const fixTheTypo = () => {
-// Solution code here...
+  // Solution code here...
+  $('.pear').text('Pear');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -33,6 +34,7 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['t', 
 
 const firstLetters = (arr) => {
   // Solution code here...
+  return arr.map(nameObject => nameObject.substring(0,1));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -45,6 +47,9 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['this
 
 const findHappiness = (arr) => {
   // Solution code here...
+  return arr.filter((values) => {
+    return values.includes(':)');
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -57,6 +62,12 @@ For example, (123) 456-7890 returns 1234567890
 
 const standardizePhoneNumbers = (arr) => {
   // Solution code here...
+  return arr.map((numbers) =>{
+    let first =numbers.substring(1,4);
+    let second = numbers.substring(6,9);
+    let third = numbers.substring(10,14);
+    return`${first}${second}${third}`;
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -295,6 +306,6 @@ xdescribe('Testing challenge 11', () => {
   });
 });
 
-function createSnippetWithJQuery(html){
+function createSnippetWithJQuery(html) {
   return cheerio.load(html);
 }
