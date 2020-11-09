@@ -10,6 +10,13 @@ E.g. [4,2,7,5,9,2] -> 9
 ------------------------------------------------------------------------------------------------ */
 const maxInArray = (arr) => {
   // Solution code here...
+
+  return arr.reduce((answerSoFar, value) => {
+    if (answerSoFar < value) {
+      answerSoFar = value;
+    }
+    return answerSoFar;
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -37,6 +44,11 @@ const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 const grandTotal = (stores) => {
   // Solution code here...
 
+  retun hoursOpen.map((value, index) => {
+    let totalCookie = );
+  stores.forEach(certainstore => {
+    totalcookie = totalCookie + certainstore[index];
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -51,6 +63,12 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 
 const salesData = (hours, data) => {
   // Solution code here...
+  let hourlyArray = [];
+  for (let i = 0; i < hours.length; i++) {
+let object = { sales : `${data[i]} cookies`, time : `${hours[i]}` };
+hourlyArray.push(object);
+  }
+  return hourlyArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -76,6 +94,7 @@ const errands = [
 
 const howManyTreats = (arr) => {
   // Solution code here...
+  return arr[2].items.quantity;
 };
 
 /* ------------------------------------------------------------------------------------------------
