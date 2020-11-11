@@ -41,12 +41,8 @@ For example, ['apple', 'banana', 'MacGyver'] returns ['Apple', 'Banana', 'MacGyv
 
 const toTitleCase = (arr) => {
   // Solution code here...
-  return arr.map(words => {
-    words.slice(0);
-    words.toUppercase();
-    console.log(words, '//words');
-    console.log(arr, '//array');
-  });
+  return arr.map(string =>
+    string.charAt(0).toUpperCase() + string.slice(1));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -121,7 +117,7 @@ let starWarsData = [{
 }];
 
 let biggerThanLuke = (arr) => {
-  console.log(arr,[2]);
+  console.log(arr, [2]);
 };
 //    Solution code here...
 //   arr.map(mass => {
