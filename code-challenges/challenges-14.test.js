@@ -117,15 +117,11 @@ let starWarsData = [{
 }];
 
 let biggerThanLuke = (arr) => {
-  console.log(arr, [2]);
+  return arr
+    .filter(character => character.mass > 77)
+    .map(character => character.name)
+    .join(' - ');
 };
-//    Solution code here...
-//   arr.map(mass => {
-//     if (mass.mass > '77') {
-//       return mass;
-//      }
-// });
-//  };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -143,6 +139,8 @@ This data could be sorted by name or price.
 
 const sortBy = (property, arr) => {
   // Solution code here...
+  return arr.sort((one, two) =>
+    one[property] > two[property] ? 1 : -1);
 };
 
 /* ------------------------------------------------------------------------------------------------
