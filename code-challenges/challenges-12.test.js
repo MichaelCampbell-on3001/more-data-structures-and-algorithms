@@ -10,6 +10,14 @@ E.g. [4,2,7,5,9,2] -> 9
 ------------------------------------------------------------------------------------------------ */
 const maxInArray = (arr) => {
   // Solution code here...
+
+
+  return arr.reduce((answerSoFar, value) => {
+    if (answerSoFar < value) {
+      answerSoFar = value;
+    }
+    return answerSoFar;
+
   let arrAns = arr.reduce((acc, val) => {
     if (val > acc) {
       acc = val;
@@ -17,6 +25,7 @@ const maxInArray = (arr) => {
     return acc;
   });
   return arrAns;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -43,6 +52,16 @@ const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
   // Solution code here...
+
+
+  return hoursOpen.map((value, index) => {
+    let totalCookie = 0;
+    stores.forEach(certainStore => {
+      totalCookie = totalCookie + certainStore[index];
+    });
+    return totalCookie;
+  });
+
   let hourlyArray = [];
 
   for (let i = 0; i < hoursOpen.length; i++) {
@@ -53,6 +72,7 @@ const grandTotal = (stores) => {
     hourlyArray.push(sumPerHour);
   }
   return hourlyArray;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -67,11 +87,20 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 
 const salesData = (hours, data) => {
   // Solution code here...
+
+  let hourlyArray = [];
+  for (let i = 0; i < hours.length; i++) {
+    let object = { sales: `${data[i]} cookies`, time: `${hours[i]}` };
+    hourlyArray.push(object);
+  }
+  return hourlyArray;
+
   let arrObj = [];
   for (let i = 0; i < data.length; i++) {
     arrObj.push({ sales: `${data[i]} cookies`, time: `${hours[i]}` });
   }
   return arrObj;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -97,6 +126,9 @@ const errands = [
 
 const howManyTreats = (arr) => {
   // Solution code here...
+
+  return arr[2].items[1].quantity;
+
   let arrTestFour = arr.map(element => {
     if element.store === 'Pet store'){
       answer = element.itmes[1].quantity;
@@ -104,6 +136,7 @@ const howManyTreats = (arr) => {
   });
   console.log(arrTestFour);
   return answer;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
