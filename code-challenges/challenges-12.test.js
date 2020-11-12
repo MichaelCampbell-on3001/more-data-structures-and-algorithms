@@ -11,12 +11,21 @@ E.g. [4,2,7,5,9,2] -> 9
 const maxInArray = (arr) => {
   // Solution code here...
 
+
   return arr.reduce((answerSoFar, value) => {
     if (answerSoFar < value) {
       answerSoFar = value;
     }
     return answerSoFar;
+
+  let arrAns = arr.reduce((acc, val) => {
+    if (val > acc) {
+      acc = val;
+    }
+    return acc;
   });
+  return arrAns;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -44,6 +53,7 @@ const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 const grandTotal = (stores) => {
   // Solution code here...
 
+
   return hoursOpen.map((value, index) => {
     let totalCookie = 0;
     stores.forEach(certainStore => {
@@ -51,26 +61,46 @@ const grandTotal = (stores) => {
     });
     return totalCookie;
   });
+
+  let hourlyArray = [];
+
+  for (let i = 0; i < hoursOpen.length; i++) {
+    let sumPerHour = 0;
+    for (let j = 0; j < stores.length; i++) {
+      sumPerHour += stores[j][i];
+    }
+    hourlyArray.push(sumPerHour);
+  }
+  return hourlyArray;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
-
+ 
 Pat has decided that he would also like to organize his data as objects containing the number of cookies sold per hour and the time.
-
+ 
 Here is sample data for the 9:00 sales: { sales: '88 cookies', time: '9 a.m.' }.
-
+ 
 Write a function named salesData that uses forEach to iterate over the hourlySales array and create an object for each hour. Return an array of the formatted data.
 ------------------------------------------------------------------------------------------------ */
 
 const salesData = (hours, data) => {
   // Solution code here...
+
   let hourlyArray = [];
   for (let i = 0; i < hours.length; i++) {
     let object = { sales: `${data[i]} cookies`, time: `${hours[i]}` };
     hourlyArray.push(object);
   }
   return hourlyArray;
+
+  let arrObj = [];
+  for (let i = 0; i < data.length; i++) {
+    arrObj.push({ sales: `${data[i]} cookies`, time: `${hours[i]}` });
+  }
+  return arrObj;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -96,7 +126,17 @@ const errands = [
 
 const howManyTreats = (arr) => {
   // Solution code here...
+
   return arr[2].items[1].quantity;
+
+  let arrTestFour = arr.map(element => {
+    if element.store === 'Pet store'){
+      answer = element.itmes[1].quantity;
+    }
+  });
+  console.log(arrTestFour);
+  return answer;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
