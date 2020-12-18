@@ -26,6 +26,7 @@ const generateSubmitButton = () => {
   // Solution code here...
   $('form').append('<button>');
   $('button').text('submit');
+  //let button = $('<button></button>').text('submit')
 };
 
 /* ------------------------------------------------------------------------------------------------
