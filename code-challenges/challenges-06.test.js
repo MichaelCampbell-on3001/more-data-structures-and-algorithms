@@ -112,10 +112,9 @@ Write a function named getHouses that returns a new array containing the names o
 const getHouses = (arr) => {
   let houses = [];
   // Solution code here...
-  characters.forEach((person) => {
-    let data = person.house;
-    houses.push(data);
-  });
+  for (let person in arr){
+    houses.push(arr[person].house);
+  }
   return houses;
 };
 
@@ -133,22 +132,11 @@ hasChildrenValues(characters, 'Sansa') will return false
 
 const hasChildrenValues = (arr, character) => {
   // Solution code here...
-  let charNumber;
-  arr.forEach((char, index) => {
-    if (char.name === character) {
-      charNumber = index;
+  for (let person in arr){
+    if (arr[person].name === character){
+      return Object.values(arr[person].children).length > 0;
     }
-  });
-  if (charNumber === undefined) {
-    return false;
-  }
-  if (arr[charNumber].children.length > 1) {
-    return true;
-  } else {
-    return false;
-  }
-
-
+  };
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -292,7 +280,7 @@ function createSnippetWithJQuery(html) {
   
     return Object.keys(obj);
 
-  };
+};
 
   /* ------------------------------------------------------------------------------------------------
   CHALLENGE 3

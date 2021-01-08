@@ -175,7 +175,7 @@ const mapCurrentEvents = () => {
 function Event(author, category, summary, url, date, title) {
   // Solution code here...
   this.author = author;
-  this.categories = this.category;
+  this.categories = category;
   this.summary = summary;
   this.img_url = url;
   this.date = date;
