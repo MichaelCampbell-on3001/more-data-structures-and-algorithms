@@ -9,7 +9,9 @@ Build a simple express server. Connect a '/hello' route that sends a greeting of
 const createServer = () => {
   // Solution code here...
   const express = require('express');
+  //const cors = require('cors');
   const app = express();
+  //app.use(cors());
   app.get('/hello', function (req, res) {
     res.send('Oh Hello There, How Are Ya?');
   });
@@ -90,6 +92,7 @@ const divisibleByFiveTwoToThePower = (input) => {
     return Array.filter(element =>element % 5 === 0 && typeof element === 'number').map(result =>Math.pow(2, result));
   });
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5 - Stetch Goal
