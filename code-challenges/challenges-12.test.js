@@ -17,14 +17,7 @@ const maxInArray = (arr) => {
       answerSoFar = value;
     }
     return answerSoFar;
-
-  let arrAns = arr.reduce((acc, val) => {
-    if (val > acc) {
-      acc = val;
-    }
-    return acc;
   });
-  return arrAns;
 
 };
 
@@ -126,16 +119,9 @@ const errands = [
 
 const howManyTreats = (arr) => {
   // Solution code here...
-
-  return arr[2].items[1].quantity;
-
-  let arrTestFour = arr.map(element => {
-    if element.store === 'Pet store'){
-      answer = element.itmes[1].quantity;
-    }
-  });
-  console.log(arrTestFour);
-  return answer;
+  return arr
+  .find((s) => s.store === 'Pet store').items
+  .find(i => i.name === 'Treats').quantity;
 
 };
 

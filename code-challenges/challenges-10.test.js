@@ -93,6 +93,7 @@ const divisibleByFiveTwoToThePower = (input) => {
   });
 };
 
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5 - Stetch Goal
 
